@@ -27,3 +27,10 @@ secp256k1_pubkey: [155, 184, 235, 12, 127, 133, 226, 211, 136, 228, 200, 65, 8,
                    135, 252, 93, 117, 158, 193, 119, 111, 188, 160, 71, 224, 13, 
                    135, 243, 224, 66, 15, 44, 0, 254, 84, 243, 220, 122, 0, 212, 
                    12, 139, 61, 5, 138, 90, 179, 162, 177, 55]
+## Account
+  1. perpetual account: configuration of Perpetual Exchange, is unique, pda from program_id
+     including admin: only admin can update the account
+               token_map: accountType, symbol, mint(token), program_token_account(vault, owner is program_id)                               
+  2. user account: user information, is unique, pda from user publickey & program_id
+     including use publickey: signer == user account
+               withdraw_id: >
